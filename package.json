@@ -1,36 +1,38 @@
 {
-  "name": "ya-messenger",
-  "version": "0.1.0",
-  "description": "Practicum messenger",
-  "source": "src/index.hbs",
-  "scripts": {
-    "start": "parcel src/index.hbs",
-    "dev": "parcel src/index.hbs --port 3000 --no-cache",
-    "build": "parcel build src/index.hbs",
-    "test": "echo 'Error: no tests' && exit 1"
-  },
-  "keywords": [],
-  "author": "Evgenii Ptitsyn <eptitsyn@gmail.com>",
-  "license": "ISC",
-  "engines": {
-    "node": ">=v17.0.0"
-  },
-  "browserslist": [
-    "> 0.5%",
-    "last 2 versions",
-    "not dead"
-  ],
-  "devDependencies": {
-    "@anikin/parcel-transformer-handlebars": "^1.0.9",
-    "@anikin/parcel-transformer-handlebars-precompile": "^1.0.1",
-    "@parcel/optimizer-blob-url": "^2.8.0",
-    "@parcel/transformer-inline": "^2.8.0",
-    "parcel": "^2.8.0",
-    "postcss": "^8.4.19",
-    "postcss-import": "^15.0.0",
-    "postcss-nested": "^6.0.0",
-    "postcss-nesting": "^10.2.0",
-    "postcss-preset-env": "^7.8.2",
-    "postcss-simple-vars": "^7.0.1"
-  }
+    "name": "ya-messenger",
+    "version": "0.1.0",
+    "description": "Practicum messenger",
+    "source": "src/index.hbs",
+    "scripts": {
+        "start": "parcel src/markup/pages/index.hbs",
+        "dev": "parcel src/markup/pages/index.hbs --port 3000 --no-cache",
+        "build": "parcel build src/markup/pages/index.hbs --log-level verbose",
+        "test": "echo 'Error: no tests' && exit 1"
+    },
+    "keywords": [],
+    "author": "Evgenii Ptitsyn <eptitsyn@gmail.com>",
+    "license": "ISC",
+    "engines": {
+        "node": ">=v18.12.1"
+    },
+    "browserslist": [
+        "> 0.5%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "devDependencies": {
+        "postcss-nested": "^6.0.0",
+        "postcss-nesting": "^10.2.0"
+    },
+    "dependencies": {
+        "@anikin/parcel-transformer-handlebars": "^1.0.9",
+        "@anikin/parcel-transformer-handlebars-precompile": "^1.0.1",
+        "@parcel/optimizer-blob-url": "^2.8.0",
+        "@parcel/transformer-inline": "^2.8.0",
+        "parcel": "^2.8.0",
+        "postcss": "^8.4.19",
+        "postcss-import": "^15.0.0",
+        "postcss-preset-env": "^7.8.2",
+        "postcss-simple-vars": "^7.0.1"
+    }
 }
