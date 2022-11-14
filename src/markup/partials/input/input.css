@@ -1,0 +1,32 @@
+input {
+    width: 100%;
+}
+
+.input {
+    height: var(--height);
+    box-sizing: border-box;
+
+    input {
+        border: var(--border-width) solid var(--color-borders-input);
+        border-radius: var(--border-radius);
+        padding:calc(.75rem - var(--border-width)) calc(.9rem - var(--border-width));
+        box-sizing: border-box;
+    }
+
+    &-container {
+        max-width: 720px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    label {
+        position:absolute;
+        left:1.75rem;
+        top:1.7rem;
+        transform:scale(0.75) translate(-0.5rem, -2.25rem);
+        color: var(--color-text-secondary);
+        background: white;
+        transition:transform .15s ease-out,color .15s ease-out;
+    }
+}

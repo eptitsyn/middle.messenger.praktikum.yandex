@@ -1,0 +1,1 @@
+import button from '../partials/button';

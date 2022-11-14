@@ -1,0 +1,13 @@
+:root {
+  --color-background-own: green;
+  --color-background: gray;
+  --color-text-secondary: rgb(112,117,121);
+
+  --color-borders-input: rgb(218,220,224);
+  --border-width: 1px;
+  --right-column-width:600px;
+  --height: 54px;
+  --border-radius: 15px;
+  --usericon-size: 89px;
+  --usericon-border-radius: 30%;
+}

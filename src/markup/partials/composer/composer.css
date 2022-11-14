@@ -1,0 +1,9 @@
+.composer {
+    width: var(--right-column-width);
+    display: flex;
+    flex-direction: row;
+
+    & .input {
+        flex-grow: 1;
+    }
+}

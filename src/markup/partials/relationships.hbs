@@ -1,0 +1,4 @@
+{{#if uri}}
+{{!-- Helps prevent duplicate content issues --}}
+<link rel="canonical" href="{{site.protocol}}://{{site.domain}}{{uri}}">
+{{/if}}

@@ -1,0 +1,19 @@
+.messages-list {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 600px;
+    min-height: 100%;
+    margin: 0 auto;
+    width: 100%; */
+    overflow-y: overlay;
+
+    &-container {
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: 0 auto;
+        /* overflow: hidden;*/
+    }
+}

@@ -1,0 +1,33 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding:0;
+    margin:0;
+}
+
+body {
+
+    display:grid;
+    grid-template-columns: 338px 1fr;
+    grid-template-rows: 80px 1fr;
+}
+main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+footer {
+    width: 600px;
+}
+
+nav {
+    height: 50px;
+}
+
+aside{
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+}

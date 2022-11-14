@@ -1,0 +1,23 @@
+---
+language: en
+stylesheets:
+    - chat.css
+title: Chat
+---
+{{#extend "base"}}
+    {{#content "main"}}
+    <nav>
+        search here
+    </nav>>
+    <aside>
+            {{>chatlist/chatlist}}
+    </aside>
+    <main>
+        {{> message-list/message-list }}
+        <footer>
+            {{> composer/composer }}
+        </footer>
+    </main>
+    
+    {{/content}}
+{{/extend}}

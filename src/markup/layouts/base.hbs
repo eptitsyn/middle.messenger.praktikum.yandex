@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="{{#if language}}{{language}}{{else}}en{{/if}}" dir="ltr">
+{{#block "head"}}
+
+<head>
+    {{#block "meta"}}
+    {{> meta}}
+    {{/block}}
+
+    {{#block "relationships"}}
+    {{> relationships}}
+    {{/block}}
+
+    {{#block "title"}}
+    <title>{{title}}</title>
+    {{/block}}
+
+    {{#block "styles"}}
+    {{#each stylesheets}}
+    <link href="{{this}}" rel="stylesheet" />
+    {{/each}}
+    {{/block}}
+    <link href="~/src/styles/styles.css" rel="stylesheet" />
+</head>
+{{/block}}
+
+{{#block "body"}}
+<body class="{{bodyclass}}">
+    {{#block "main"}}
+    {{/block}}
+</body>
+{{/block}}
+
+</html>

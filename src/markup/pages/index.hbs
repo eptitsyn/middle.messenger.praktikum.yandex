@@ -1,0 +1,23 @@
+---
+language: en
+stylesheets:
+    - index.css
+title: Index | Parcel Bundler With Handlebars
+---
+{{#extend "base"}}
+    {{#content "main"}}
+    <main>
+        <form>
+            <div class="frame">
+                <div class="input-container">
+                    {{>input/input label="Username" id="login"}}
+                    {{>input/input label="Password" id="password" type="password"}}
+                    {{>button/button caption="Sign In"}}
+                    {{>button/link class="button-primary" caption="Register" href="/register.html"}}
+                </div>
+            </div>
+        </form>
+    </main>
+    <a href="chat.hbs">chat</a>
+    {{/content}}
+{{/extend}}

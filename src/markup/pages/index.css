@@ -1,0 +1,27 @@
+@import "../../styles/_variables.css";
+
+body {
+    min-height: 90vh;
+    display: grid;
+}
+
+.frame {
+    border: 1px solid;
+}
+
+
+
+[contenteditable="true"] {
+    cursor: text;
+    outline: none;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    white-space: pre-wrap;
+    background-color: transparent;
+    caret-color: #3390ec;
+    caret-color: var(--primary-color);
+    color: #000;
+    color: var(--primary-text-color);
+}
