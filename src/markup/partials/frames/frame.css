@@ -1,0 +1,6 @@
+.singleframe {
+    border: 1px solid;
+    margin: 0 auto;
+    display: inline-block;
+    border-radius: var(--border-radius);
+}

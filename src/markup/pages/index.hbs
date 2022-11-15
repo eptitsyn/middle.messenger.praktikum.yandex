@@ -1,23 +1,21 @@
 ---
 language: en
+title: Login
 stylesheets:
     - index.css
-title: Index | Parcel Bundler With Handlebars
 ---
 {{#extend "base"}}
     {{#content "main"}}
     <main>
-        <form>
-            <div class="frame">
-                <div class="input-container">
-                    {{>input/input label="Username" id="login"}}
-                    {{>input/input label="Password" id="password" type="password"}}
-                    {{>button/button caption="Sign In"}}
-                    {{>button/link class="button-primary" caption="Register" href="/register.html"}}
-                </div>
+        <form class="singleframe">
+            <div class="form container-vertical">
+                {{>input/input label="Login" id="login"}}
+                {{>input/input label="Password" id="password" type="password"}}
+                <div style="height: 23px;"></div>
+                {{>button/link caption="Sign in" class="signin-button" href="chat.hbs"}}
+                {{>button/link class="button-primary button__white" caption="Register" href="register.hbs"}}
             </div>
         </form>
     </main>
-    <a href="chat.hbs">chat</a>
     {{/content}}
 {{/extend}}

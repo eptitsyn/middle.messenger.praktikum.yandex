@@ -4,6 +4,7 @@
     border: 3px solid gray;
     border-radius: var(--usericon-border-radius);
     box-sizing: border-box;
+    display: inline-block;
 
     & img {
         border-radius: var(--usericon-border-radius);

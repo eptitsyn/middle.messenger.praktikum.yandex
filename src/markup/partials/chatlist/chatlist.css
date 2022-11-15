@@ -5,47 +5,8 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        margin: 0 auto;
+        margin: 0;
         /* overflow: hidden;*/
     }
 }
 
-.chatelement {
-    height: 111px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 10px;
-
-    &__avatar {
-        margin: auto;
-        flex:none;
-    }
-
-    &__info {
-        flex: 1;
-        order: 1;
-        flex-grow: 1;
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0.3rem;
-        gap: 2px;
-
-        &__label {
-
-            flex: none;
-            order: 0;
-            align-self: stretch;
-            flex-grow: 0;
-        }
-
-        &__lastmsg {
-            flex: none;
-            order: 1;
-            align-self: stretch;
-            flex-grow: 0;
-        }
-    }
-}

@@ -1,6 +1,7 @@
 <div class="input">
-    <input type="{{#if type}}{{type}}{{else}}text{{/if}}" id="{{id}}" contenteditable="true" dir="auto" />
     {{#if label}}
-        <label>{{label}}</label>
+        <label class="caption__heavy">{{label}}</label>
     {{/if}}
+    <input type="{{#if type}}{{type}}{{else}}text{{/if}}" id="{{id}}" name="{{name}}" contenteditable="true" dir="auto" />
+    <div class="input__errorinfo caption__light">label info</div>
 </div>

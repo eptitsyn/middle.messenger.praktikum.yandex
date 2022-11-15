@@ -9,7 +9,7 @@ title: Chat
         {{#embed "frames/mainframe"}}
             {{#content "left"}}
                 <nav>
-                    {{> button/link caption="Profile" href="profile.hbs"}}
+                    {{> button/button caption="Profile"}}
                     {{> input/input caprion="Search"}}
                 </nav>
                 <aside>
@@ -17,9 +17,15 @@ title: Chat
                 </aside>
             {{/content}}
             {{#content "right"}}
-                <div>
-                    Select Chat
-                </div>
+                <header>
+                    {{>usericon/usericon src="#"}}
+                </header>
+                <main>
+                    {{> message-list/message-list }}
+                    <footer>
+                        {{> composer/composer }}
+                    </footer>
+                </main>
             {{/content}}
         {{/embed}}
     {{/content}}

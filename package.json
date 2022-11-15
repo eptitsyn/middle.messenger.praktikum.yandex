@@ -2,9 +2,9 @@
     "name": "ya-messenger",
     "version": "0.1.0",
     "description": "Practicum messenger",
-    "source": "src/index.hbs",
+    "source": "src/markup/pages/index.hbs",
     "scripts": {
-        "start": "parcel src/markup/pages/index.hbs",
+        "start": "parcel src/markup/pages/index.hbs --port 3000",
         "dev": "parcel src/markup/pages/index.hbs --port 3000 --no-cache",
         "build": "parcel build src/markup/pages/index.hbs --log-level verbose",
         "test": "echo 'Error: no tests' && exit 1"
@@ -21,12 +21,13 @@
         "not dead"
     ],
     "devDependencies": {
+        "front-matter": "^4.0.2",
+        "handlebars": "^4.7.7",
         "postcss-nested": "^6.0.0",
         "postcss-nesting": "^10.2.0"
     },
     "dependencies": {
         "@anikin/parcel-transformer-handlebars": "^1.0.9",
-        "@anikin/parcel-transformer-handlebars-precompile": "^1.0.1",
         "@parcel/optimizer-blob-url": "^2.8.0",
         "@parcel/transformer-inline": "^2.8.0",
         "parcel": "^2.8.0",
