@@ -6,7 +6,7 @@ Run `npm run build` to build package
 Run `npm start` to run express server
 
 ## Посмотреть
-[На Netlify](https://eptitsyn-ya-praktikum-js.netlify.app/)
+[На Netlify](https://sprint-1--eptitsyn-ya-praktikum-js.netlify.app/)
 
 ## Макет
 
