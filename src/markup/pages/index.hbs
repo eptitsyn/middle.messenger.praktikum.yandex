@@ -3,18 +3,28 @@ language: en
 title: Login
 stylesheets:
     - index.css
+links:
+    - 404.hbs
+    - 500.hbs
+    - login.hbs
+    - register.hbs
+    - chat.hbs
+    - profile.hbs
+
 ---
 {{#extend "base"}}
     {{#content "main"}}
     <main>
         <form class="singleframe">
-            <div class="form container-vertical">
-                {{>input/input label="Login" id="login"}}
-                {{>input/input label="Password" id="password" type="password"}}
-                <div style="height: 23px;"></div>
-                {{>button/link caption="Sign in" class="signin-button" href="chat.hbs"}}
-                {{>button/link class="button-primary button__white" caption="Register" href="register.hbs"}}
-            </div>
+            <nav class="form container-vertical">
+                <ul>
+                    {{#each links}}
+                        <li>
+                            <a href="{{this}}">{{this}}</a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </nav>
         </form>
     </main>
     {{/content}}

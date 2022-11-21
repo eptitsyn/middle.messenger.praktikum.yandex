@@ -21,16 +21,14 @@
         "not dead"
     ],
     "devDependencies": {
+        "@anikin/parcel-transformer-handlebars": "^1.0.9",
+        "parcel": "^2.8.0",
+        "@parcel/optimizer-blob-url": "^2.8.0",
+        "@parcel/transformer-inline": "^2.8.0",
         "front-matter": "^4.0.2",
         "handlebars": "^4.7.7",
         "postcss-nested": "^6.0.0",
-        "postcss-nesting": "^10.2.0"
-    },
-    "dependencies": {
-        "@anikin/parcel-transformer-handlebars": "^1.0.9",
-        "@parcel/optimizer-blob-url": "^2.8.0",
-        "@parcel/transformer-inline": "^2.8.0",
-        "parcel": "^2.8.0",
+        "postcss-nesting": "^10.2.0",
         "postcss": "^8.4.19",
         "postcss-import": "^15.0.0",
         "postcss-preset-env": "^7.8.2",
