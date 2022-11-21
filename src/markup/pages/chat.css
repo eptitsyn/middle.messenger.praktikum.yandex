@@ -11,6 +11,10 @@ body {
     grid-template-rows: 100%;
 }
 
+.column > div {
+    overflow-y: scroll;
+}
+
 .column__left {
     display:grid;
     grid-template-rows: 150px 1fr;
@@ -34,6 +38,3 @@ footer {
 
 }
 
-aside {
-    overflow-y: scroll;
-}

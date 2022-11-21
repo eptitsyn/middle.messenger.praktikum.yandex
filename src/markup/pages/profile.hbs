@@ -19,13 +19,13 @@ title: Profile
                 {{>input/input label="Login" name="display_name"}}
                 {{>input/input label="Login" name="login"}}
                 {{>input/input label="Email" name="email"}}
-                {{>input/input label="Phone" name="phone"}}
+                {{>input/input label="Phone" name="phone" type="tel"}}
                 {{>input/input label="Password" id="password" type="password"}}
                 {{>input/input label="Repat password" id="password_repeat" type="password"}}
 
                 <div style="height: 23px;"></div>
                 {{>button/link caption="Change password" class="signin-button" href="chat.hbs"}}
-                {{>button/link class="button-primary button__white" caption="Logout" href="register.hbs"}}
+                {{>button/link class="button-primary button__white" caption="Logout" href="login.hbs"}}
             </div>
         </form>
     </main>

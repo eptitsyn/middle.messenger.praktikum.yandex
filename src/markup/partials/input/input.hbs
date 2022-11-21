@@ -2,6 +2,6 @@
     {{#if label}}
         <label class="caption__heavy">{{label}}</label>
     {{/if}}
-    <input type="{{#if type}}{{type}}{{else}}text{{/if}}" id="{{id}}" name="{{name}}" contenteditable="true" dir="auto" />
+    <input type="{{#if type}}{{type}}{{else}}text{{/if}}" id="{{id}}" name="{{name}}" contenteditable="true" dir="auto" {{#if param}}{{{param}}}{{/if}}/>
     <div class="input__errorinfo caption__light">label info</div>
 </div>

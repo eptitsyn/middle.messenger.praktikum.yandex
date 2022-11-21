@@ -1,4 +1,6 @@
-@import './_variables.css'; 
+@import './_variables.css';
+@import './normalize.css';
+
 
 /* components */
 @import '../markup/partials/button/button.css';
@@ -29,6 +31,11 @@ main {
 
 h2 {
   text-align: center;
+}
+
+ul {
+  margin:0;
+  padding:0;
 }
 
 .centercontent {

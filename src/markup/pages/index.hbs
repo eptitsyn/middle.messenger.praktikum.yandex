@@ -4,27 +4,28 @@ title: Login
 stylesheets:
     - index.css
 links:
-    - 404.hbs
-    - 500.hbs
-    - login.hbs
-    - register.hbs
-    - chat.hbs
-    - profile.hbs
+    - 404
+    - 500
+    - login
+    - register
+    - chat
+    - chatselected
+    - profile
 
 ---
 {{#extend "base"}}
     {{#content "main"}}
     <main>
         <form class="singleframe">
-            <nav class="form container-vertical">
+            <div class="form container-vertical">
                 <ul>
                     {{#each links}}
                         <li>
-                            <a href="{{this}}">{{this}}</a>
+                            <a href="{{this}}.hbs">{{this}}</a>
                         </li>
                     {{/each}}
                 </ul>
-            </nav>
+            </div>
         </form>
     </main>
     {{/content}}

@@ -10,11 +10,11 @@ title: Chat
             {{#content "left"}}
                 <nav>
                     {{> button/button caption="Profile"}}
-                    {{> input/input caprion="Search"}}
+                    {{> input/input caprion="Search" type="search" param="placeholder='Search'"}}
                 </nav>
-                <aside>
+                <div>
                     {{>chatlist/chatlist}}
-                </aside>
+                </div>
             {{/content}}
             {{#content "right"}}
                 <header>
