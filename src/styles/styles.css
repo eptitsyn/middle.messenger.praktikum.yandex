@@ -42,6 +42,10 @@ ul, li {
     display: inline-block;
 }
 
+.space-top {
+    margin-top: 23px;
+}
+
 [contenteditable="true"] {
     cursor: text;
     outline: none;
