@@ -6,7 +6,8 @@
 
     /* Colours*/
     --color-main: black;
-    --color-background: lightgray;
+    --color-background: white;
+    --color-interface-background: lightgray;
     --color-border: black;
     --color-secondary-border: gray;
 

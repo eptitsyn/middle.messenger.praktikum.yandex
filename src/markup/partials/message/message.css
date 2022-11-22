@@ -1,5 +1,6 @@
 .message {
     display: flex;
+    margin: 1rem;
     margin-bottom: 0.375rem;
     --background-color: var(--color-message);
 
