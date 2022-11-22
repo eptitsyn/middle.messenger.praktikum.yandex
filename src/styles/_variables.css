@@ -7,4 +7,11 @@
     --color-main: black;
     --color-background: lightgray;
     --color-border: black;
+
+    --color-message: green;
+    --color-message-own: lightblue;
+
+    --chat-background: white;
+    --interface-background: lightgray;
+
 }

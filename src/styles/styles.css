@@ -20,22 +20,18 @@ body {
     font: "Open Sans", sans-serif;
     font-family: sans-serif;
     margin: 0;
+    padding: 0;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
 
-h2 {
-    text-align: center;
-}
 
 ul {
     margin: 0;
     padding: 0;
+}
+
+h2 {
+    text-align: center;
 }
 
 .centercontent {

@@ -22,6 +22,7 @@
     ],
     "devDependencies": {
         "@anikin/parcel-transformer-handlebars": "1.0.9",
+        "@anikin/parcel-transformer-handlebars-precompile": "1.0.1",
         "@microsoft/eslint-formatter-sarif": "^3.0.0",
         "@parcel/optimizer-blob-url": "2.8.0",
         "@parcel/transformer-inline": "2.8.0",

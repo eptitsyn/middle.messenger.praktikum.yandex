@@ -4,25 +4,19 @@ stylesheets:
 - chat.css
 title: Chat
 ---
-{{#extend "base"}}
+{{#extend "base" bodyclass="chat__body"}}
     {{#content "main"}}
         {{#embed "frames/mainframe"}}
             {{#content "left"}}
-                <nav>
-                    {{> button/button caption="Profile"}}
-                    {{> input/input caption="Search" type="search" placeholder='Search'}}
-                </nav>
-                <div>
-                    {{>chatlist/chatlist}}
-                </div>
+                {{> frames/left}}
             {{/content}}
             {{#content "right"}}
-                <header>
+                <main class="chat__container">
+                    <header class="chat__head">
                     {{>usericon/usericon src="#"}}
-                </header>
-                <main>
+                    </header>
                     {{> message-list/message-list }}
-                    <footer>
+                    <footer class="chat__composer">
                         {{> composer/composer }}
                     </footer>
                 </main>

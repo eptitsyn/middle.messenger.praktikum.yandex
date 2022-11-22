@@ -8,7 +8,7 @@
     width: 100%; */
     overflow-y: overlay;
 
-    &-container {
+    &__container {
         width: 600px;
         display: flex;
         flex-direction: column;

@@ -1,1 +1,6 @@
-<button type="button" class="{{#if class}}{{class}}{{else}}button-primary{{/if}}" onclick="window.location.href='{{href}}'">{{{caption}}}</button>
+<button 
+    type="{{#if type}}{{type}}{{else}}button{{/if}}" 
+    class="button {{#if class}}{{class}}{{/if}}" 
+    onclick="window.location.href='{{href}}'">
+    {{{caption}}}
+</button>

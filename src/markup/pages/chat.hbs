@@ -4,20 +4,14 @@ stylesheets:
 - chat.css
 title: Chat
 ---
-{{#extend "base"}}
+{{#extend "base" bodyclass="chat__body"}}
     {{#content "main"}}
         {{#embed "frames/mainframe"}}
             {{#content "left"}}
-                <nav>
-                    {{> button/link caption="Profile" href="profile.hbs"}}
-                    {{> input/input }}
-                </nav>
-                <div>
-                    {{>chatlist/chatlist}}
-                </div>
+                {{> frames/left}}
             {{/content}}
             {{#content "right"}}
-                <div>
+                <div class="chat__box">
                     Select Chat
                 </div>
             {{/content}}

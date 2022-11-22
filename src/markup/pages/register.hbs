@@ -4,7 +4,7 @@ title: Register
 stylesheets:
     - register.css
 ---
-{{#extend "base"}}
+{{#extend "base" bodyclass="centercontent"}}
     {{#content "main"}}
     <main>
         <form class="singleframe">
@@ -14,12 +14,11 @@ stylesheets:
                 {{>input/input label="Lastname" name="second_name"}}
                 {{>input/input label="Login" name="login"}}
                 {{>input/input label="Email" name="email"}}
-                {{>input/input label="Login" name="login"}}
                 {{>input/input label="Password" id="password" type="password"}}
-                {{>input/input label="Repat password" id="password_repeat" type="password"}}
-                {{>input/input label="Phone" name="phone"}}
-                {{>button/button caption="Register" class="button-primary signin-button"}}
-                {{>button/link class="button-primary button__white" caption="Cancel" href="index.hbs"}}
+                {{>input/input label="Repeat password" id="password_repeat" type="password"}}
+                {{>input/input label="Phone" name="phone" type="tel"}}
+                {{>button/button caption="Register" class="signin-button"}}
+                {{>button/link class="button__white" caption="Cancel" href="index.hbs"}}
             </div>
         </form>
     </main>
