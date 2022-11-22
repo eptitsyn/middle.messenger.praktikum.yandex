@@ -13,23 +13,21 @@
         align-self: stretch;
         flex-grow: 0;
 
-
         border: 1px solid gray;
         border-radius: var(--border-radius);
         padding: 0.7rem;
     }
 
     label {
-        background:white;
-        color:gray;
+        background: white;
+        color: gray;
         display: block;
         padding: 0 0.25rem;
         position: absolute;
         left: 1rem;
         top: 0.1rem;
 
-        
-        transition: transform .15s ease-out,color .15s ease-out;
+        transition: transform 0.15s ease-out, color 0.15s ease-out;
         cursor: text;
         pointer-events: none;
         transform-origin: left center;
@@ -37,7 +35,7 @@
     }
 
     &__errorinfo {
-        display:none;
+        display: none;
         color: lightgray;
         height: 16px;
         /* Inside auto layout */

@@ -1,20 +1,20 @@
-@import './_variables.css';
-@import './normalize.css';
-
+@import "./_variables.css";
+@import "normalize.css";
 
 /* components */
-@import '../markup/partials/button/button.css';
-@import '../markup/partials/message-list/message-list.css';
-@import '../markup/partials/message/message.css';
-@import '../markup/partials/composer/composer.css';
-@import '../markup/partials/input/input.css';
-@import '../markup/partials/chatlist/chatlist.css';
-@import '../markup/partials/chatlist/chatlistelement.css';
-@import '../markup/partials/usericon/usericon.css';
-@import '../markup/partials/frames/frame.css';
-@import '../markup/partials/frames/mainframe.css';
+@import "../markup/partials/button/button.css";
+@import "../markup/partials/message-list/message-list.css";
+@import "../markup/partials/message/message.css";
+@import "../markup/partials/composer/composer.css";
+@import "../markup/partials/input/input.css";
+@import "../markup/partials/chatlist/chatlist.css";
+@import "../markup/partials/chatlist/chatlistelement.css";
+@import "../markup/partials/usericon/usericon.css";
+@import "../markup/partials/frames/frame.css";
+@import "../markup/partials/frames/mainframe.css";
 
-html, body {
+html,
+body {
     height: 100%;
     min-height: 90vh;
     font: "Open Sans", sans-serif;
@@ -23,26 +23,26 @@ html, body {
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 h2 {
-  text-align: center;
+    text-align: center;
 }
 
 ul {
-  margin:0;
-  padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 .centercontent {
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .form {
@@ -68,28 +68,27 @@ ul {
 }
 
 .container-vertical {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .vertical-center {
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;   
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
-.caption{
-  &__heavy {
-    font-weight: 600;
-    font-size: 0.9em;
-    line-height: 16px;
-  }
+.caption {
+    &__heavy {
+        font-weight: 600;
+        font-size: 0.9em;
+        line-height: 16px;
+    }
 
-  &__light {
-    font-size: 0.8em;
-    font-weight: 400;
-  }
+    &__light {
+        font-size: 0.8em;
+        font-weight: 400;
+    }
 }
-

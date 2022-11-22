@@ -1,11 +1,10 @@
 :root {
-  --border-radius: 10px;
-  --usericon-size: 89px;
-  --usericon-border-radius: 30%;
+    --border-radius: 10px;
+    --usericon-size: 89px;
+    --usericon-border-radius: 30%;
 
-  /* Colours*/
-  --color-main: black;
-  --color-background: lightgray;
-  --color-border: black;
-  
+    /* Colours*/
+    --color-main: black;
+    --color-background: lightgray;
+    --color-border: black;
 }
