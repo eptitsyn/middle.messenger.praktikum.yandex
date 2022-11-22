@@ -2,7 +2,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     padding: 8px;
     gap: 8px;
 
@@ -13,14 +14,14 @@
         align-self: stretch;
         flex-grow: 0;
 
-        border: 1px solid gray;
+        border: var(--border-thickness) solid var(--color-secondary-border);
         border-radius: var(--border-radius);
         padding: 0.7rem;
     }
 
     &__label {
         background: white;
-        color: gray;
+        color: var(--color-primary-label);
         display: block;
         padding: 0 0.25rem;
         position: absolute;
@@ -36,7 +37,7 @@
 
     &__errorinfo {
         display: none;
-        color: lightgray;
+        color: var(--color-secondary-label);
         height: 16px;
         /* Inside auto layout */
         flex: none;

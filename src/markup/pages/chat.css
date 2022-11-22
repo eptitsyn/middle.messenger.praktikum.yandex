@@ -17,6 +17,20 @@
         align-items: center;
         height: 100%;
     }
+
+    &__head, &__composer {
+        width: 100%;
+        display:flex;
+        flex-direction:row;
+        justify-content: left;
+        align-items: center;
+    }
+
+    &__head {
+        &__name {
+            margin:1rem;
+        }
+    }
 }
 
 .scroll-y {

@@ -1,7 +1,7 @@
 @import "./_variables.css";
 @import "normalize.css";
 
-/* components */
+/* Partials */
 @import "../markup/partials/button/button.css";
 @import "../markup/partials/message-list/message-list.css";
 @import "../markup/partials/message/message.css";
@@ -23,15 +23,9 @@ body {
     padding: 0;
 }
 
-
-
-ul {
+ul, li {
     margin: 0;
     padding: 0;
-}
-
-h2 {
-    text-align: center;
 }
 
 .centercontent {
@@ -58,9 +52,9 @@ h2 {
     white-space: pre-wrap;
     background-color: transparent;
     caret-color: #3390ec;
-    caret-color: var(--primary-color);
+    caret-color: var(--color-primary-caret);
     color: #000;
-    color: var(--primary-text-color);
+    color: var(--color-primary-text);
 }
 
 .container-vertical {

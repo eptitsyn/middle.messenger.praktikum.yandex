@@ -13,7 +13,8 @@ title: Chat
             {{#content "right"}}
                 <main class="chat__container">
                     <header class="chat__head">
-                    {{>usericon/usericon src="#"}}
+                    {{>usericon/usericon src="../../../static/images/blank-profile-picture.png"}}
+                        <label class="chat__head__name">John Doe</label>
                     </header>
                     {{> message-list/message-list }}
                     <footer class="chat__composer">
