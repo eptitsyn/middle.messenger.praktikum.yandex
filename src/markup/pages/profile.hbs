@@ -1,0 +1,35 @@
+---
+language: en
+stylesheets:
+    - profile.css
+title: Profile
+---
+{{#extend "base" bodyclass="centercontent"}}
+    {{#content "main"}}
+    <main>
+        <form class="singleframe">
+            <div class="form container-vertical">
+                    {{>button/link caption="Back" href="chat.hbs"}}
+                <div class="profile__avatar">
+                    <div class="profile__avatar__img">
+                        {{>usericon/usericon src="../../../static/images/blank-profile-picture.png"}}
+                    </div>
+                    <div class="profile__avatar__name">John Smith</div>
+                </div>
+                {{>input/input label="Firstname" name="first_name"}}
+                {{>input/input label="Lastname" name="second_name"}}
+                {{>input/input label="Login" name="display_name"}}
+                {{>input/input label="Login" name="login"}}
+                {{>input/input label="Email" name="email"}}
+                {{>input/input label="Phone" name="phone" type="tel"}}
+                {{>input/input label="Old password" name="oldPassword" type="password"}}
+                {{>input/input label="New password" id="newPassword" type="password"}}
+                {{>input/input label="Repat password" id="password_repeat" type="password"}}
+                
+                {{>button/link class="space-top" caption="Save changes" href="chat.hbs"}}
+                {{>button/link class="button-primary button__white" caption="Logout" href="login.hbs"}}
+            </div>
+        </form>
+    </main>
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,27 @@
+---
+language: en
+stylesheets:
+- chat.css
+title: Chat
+---
+{{#extend "base" bodyclass="chat__body"}}
+    {{#content "main"}}
+        {{#embed "frames/mainframe"}}
+            {{#content "left"}}
+                {{> frames/left}}
+            {{/content}}
+            {{#content "right"}}
+                <main class="chat__container">
+                    <header class="chat__head">
+                    {{>usericon/usericon src="../../../static/images/blank-profile-picture.png"}}
+                        <label class="chat__head__name">John Doe</label>
+                    </header>
+                    {{> message-list/message-list }}
+                    <footer class="chat__composer">
+                        {{> composer/composer }}
+                    </footer>
+                </main>
+            {{/content}}
+        {{/embed}}
+    {{/content}}
+{{/extend}}

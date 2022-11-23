@@ -30,14 +30,28 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.5.1
+        with:
+          node-version: 'lts/*'
+          check-latest: true
+
       - name: Install ESLint
-        run: |
-          npm install eslint@8.27.0
-          npm install @microsoft/eslint-formatter-sarif@3.0.0
+        run: | 
+          npm install @typescript-eslint/eslint-plugin
+          npm install @typescript-eslint/parser
+          npm install eslint
+          npm install eslint-config-standard-with-typescript
+          npm install eslint-plugin-import
+          npm install eslint-plugin-n
+          npm install eslint-plugin-promise
+          npm install eslint-plugin-react
+          npm install @microsoft/eslint-formatter-sarif
 
       - name: Run ESLint
-        run: npx eslint .
-          --config .eslintrc.js
+        run: >
+          npx eslint .
+          --config .eslintrc.yml
           --ext .js,.jsx,.ts,.tsx
           --format @microsoft/eslint-formatter-sarif 
           --output-file eslint-results.sarif

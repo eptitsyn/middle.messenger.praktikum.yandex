@@ -1,17 +1,52 @@
 {
-  "name": "test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "parcel index.hbs",
-    "build": "parcel build index.hbs"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@anikin/parcel-transformer-handlebars": "^1.0.9",
-    "parcel": "^2.7.0"
-  }
+    "name": "ya-messenger",
+    "version": "0.1.0",
+    "description": "Practicum messenger",
+    "source": "src/markup/pages/index.hbs",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "parcel src/markup/pages/index.hbs --port 3000 --no-cache --open",
+        "build": "parcel build src/markup/pages/index.hbs --log-level verbose",
+        "test": "echo 'Error: no tests' && exit 1"
+    },
+    "keywords": [],
+    "author": "Evgenii Ptitsyn <eptitsyn@gmail.com>",
+    "license": "ISC",
+    "engines": {
+        "node": ">=v18.12.1"
+    },
+    "browserslist": [
+        "> 0.5%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "devDependencies": {
+        "@anikin/parcel-transformer-handlebars": "1.0.9",
+        "@anikin/parcel-transformer-handlebars-precompile": "1.0.1",
+        "@microsoft/eslint-formatter-sarif": "^3.0.0",
+        "@parcel/optimizer-blob-url": "2.8.0",
+        "@parcel/transformer-inline": "2.8.0",
+        "@typescript-eslint/eslint-plugin": "^5.44.0",
+        "@typescript-eslint/parser": "5.44.0",
+        "eslint": "8.28.0",
+        "eslint-config-standard-with-typescript": "23.0.0",
+        "eslint-plugin-import": "2.26.0",
+        "eslint-plugin-n": "15.5.1",
+        "eslint-plugin-promise": "6.1.1",
+        "eslint-plugin-react": "7.31.11",
+        "front-matter": "4.0.2",
+        "handlebars": "4.7.7",
+        "parcel": "2.8.0",
+        "postcss": "8.4.19",
+        "postcss-import": "15.0.0",
+        "postcss-nested": "6.0.0",
+        "postcss-nesting": "10.2.0",
+        "postcss-preset-env": "7.8.2",
+        "postcss-simple-vars": "7.0.1",
+        "typescript": "4.9.3"
+    },
+    "dependencies": {
+        "express": "4.18.2",
+        "normalize.css": "8.0.1"
+    }
 }

@@ -1,6 +1,16 @@
 {
-  "extends": "@parcel/config-default",
-  "transformers": {
-    "*.hbs": ["@anikin/parcel-transformer-handlebars"]
-  }
+    "extends": "@parcel/config-default",
+    "transformers": {
+        "*.hbs": [
+            "@anikin/parcel-transformer-handlebars"
+        ],
+        "blob-url:*": [
+            "@parcel/transformer-inline"
+        ]
+    },
+    "optimizers": {
+        "blob-url:*": [
+            "@parcel/optimizer-blob-url"
+        ]
+    }
 }

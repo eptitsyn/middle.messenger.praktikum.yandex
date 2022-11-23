@@ -1,0 +1,20 @@
+---
+language: en
+stylesheets:
+- chat.css
+title: Chat
+---
+{{#extend "base" bodyclass="chat__body"}}
+    {{#content "main"}}
+        {{#embed "frames/mainframe"}}
+            {{#content "left"}}
+                {{> frames/left}}
+            {{/content}}
+            {{#content "right"}}
+                <div class="chat__box">
+                    Select Chat
+                </div>
+            {{/content}}
+        {{/embed}}
+    {{/content}}
+{{/extend}}

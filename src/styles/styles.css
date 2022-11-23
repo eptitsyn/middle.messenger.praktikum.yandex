@@ -1,0 +1,89 @@
+@import "./_variables.css";
+@import "normalize.css";
+
+/* Partials */
+@import "../markup/partials/button/button.css";
+@import "../markup/partials/message-list/message-list.css";
+@import "../markup/partials/message/message.css";
+@import "../markup/partials/composer/composer.css";
+@import "../markup/partials/input/input.css";
+@import "../markup/partials/chatlist/chatlist.css";
+@import "../markup/partials/chatlist/chatlistelement.css";
+@import "../markup/partials/usericon/usericon.css";
+@import "../markup/partials/frames/frame.css";
+@import "../markup/partials/frames/mainframe.css";
+
+html,
+body {
+    height: 100%;
+    min-height: 90vh;
+    font: "Open Sans", sans-serif;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.centercontent {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.form {
+    width: 17.8rem;
+    margin: 0 auto;
+    padding: 20px 18px;
+    display: inline-block;
+}
+
+.space-top {
+    margin-top: 23px;
+}
+
+[contenteditable="true"] {
+    cursor: text;
+    outline: none;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    white-space: pre-wrap;
+    background-color: transparent;
+    caret-color: #3390ec;
+    caret-color: var(--color-primary-caret);
+    color: #000;
+    color: var(--color-primary-text);
+}
+
+.container-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-center {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.caption {
+    &__heavy {
+        font-weight: 600;
+        font-size: 0.9em;
+        line-height: 16px;
+    }
+
+    &__light {
+        font-size: 0.8em;
+        font-weight: 400;
+    }
+}
