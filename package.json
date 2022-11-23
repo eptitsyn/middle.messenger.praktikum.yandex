@@ -5,7 +5,7 @@
     "source": "src/markup/pages/index.hbs",
     "scripts": {
         "start": "node app.js",
-        "dev": "parcel src/markup/pages/index.hbs --port 3000 --no-cache",
+        "dev": "parcel src/markup/pages/index.hbs --port 3000 --no-cache --open",
         "build": "parcel build src/markup/pages/index.hbs --log-level verbose",
         "test": "echo 'Error: no tests' && exit 1"
     },
