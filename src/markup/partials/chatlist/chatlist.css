@@ -1,11 +1,12 @@
 .chat-list {
-    overflow-y: overlay;
+  overflow-y: overlay;
 
-    &-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        margin: 0;
-        /* overflow: hidden;*/
-    }
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0;
+
+    /* overflow: hidden; */
+  }
 }

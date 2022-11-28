@@ -1,16 +1,16 @@
 .profile {
-    &__avatar {
-        display: flex; 
-        flex-direction:row;
-        justify-content: left;
-        align-items: center;
+  &__avatar {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
 
-        &__img {
-            
-        }
+    &__img {
 
-        &__name {
-            margin: 1rem;
-        }
     }
+
+    &__name {
+      margin: 1rem;
+    }
+  }
 }

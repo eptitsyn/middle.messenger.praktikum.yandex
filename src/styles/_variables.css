@@ -1,26 +1,21 @@
 :root {
-    --border-radius: 10px;
-    --border-thickness: 1px;
-    --usericon-size: 89px;
-    --usericon-border-radius: 30%;
+  --border-radius: 10px;
+  --border-thickness: 1px;
+  --usericon-size: 89px;
+  --usericon-border-radius: 30%;
 
-    /* Colours*/
-    --color-main: black;
-    --color-background: white;
-    --color-interface-background: lightgray;
-    --color-border: black;
-    --color-secondary-border: gray;
-
-    --color-primary-text: black;
-    --color-primary-caret: #3390ec;
-    --color-primary-label: black;
-    --color-secondary-label: gray;
-    
-
-    --color-message: green;
-    --color-message-own: lightblue;
-
-    --chat-background: white;
-    --interface-background: lightgray;
-
+  /* Colours */
+  --color-main: black;
+  --color-background: white;
+  --color-interface-background: lightgray;
+  --color-border: black;
+  --color-secondary-border: gray;
+  --color-primary-text: black;
+  --color-primary-caret: #3390ec;
+  --color-primary-label: black;
+  --color-secondary-label: gray;
+  --color-message: green;
+  --color-message-own: lightblue;
+  --chat-background: white;
+  --interface-background: lightgray;
 }
