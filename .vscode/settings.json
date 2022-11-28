@@ -1,12 +1,12 @@
 {
-    "files.autoSave": "afterDelay",
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
     "typescript.tsserver.experimental.enableProjectDiagnostics": true,
     "js/ts.implicitProjectConfig.strictFunctionTypes": true,
     "cSpell.words": [
         "anikin",
-        "sarif"
+        "sarif",
+        "stylelint"
     ],
     "eslint.alwaysShowStatus": true,
-    "eslint.lintTask.enable": true
+    "eslint.lintTask.enable": true,
+    "editor.formatOnType": true
 }
