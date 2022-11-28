@@ -1,25 +1,28 @@
 .button {
-    height: 37px;
-    border-radius: var(--border-radius);
-    border: 0;
-    margin: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+  height: 37px;
+  border-radius: var(--border-radius);
+  border: 0;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: #4565d6;
+  cursor: pointer;
 
-    background: #4565d6;
+  /* Button text */
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
 
-    /* Button text */
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
+  &__white {
+    background: white;
+    border: 1px lightgray solid;
+  }
 
-    &__white {
-        background: white;
-        border: 1px lightgray solid;
-    }
+  &:focus {
+    box-shadow: 0 0 0 4px #cbd6ee;
+  }
 }
-

@@ -6,5 +6,7 @@
     "cSpell.words": [
         "anikin",
         "sarif"
-    ]
+    ],
+    "eslint.alwaysShowStatus": true,
+    "eslint.lintTask.enable": true
 }
