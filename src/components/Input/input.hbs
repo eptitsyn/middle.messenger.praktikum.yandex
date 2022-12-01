@@ -1,0 +1,10 @@
+<div class="input">
+    {{{button}}}
+    {{#if label}}
+        <label class="input__label">{{label}}</label>
+    {{/if}}
+    <input class="input__input" type="{{#if type}}{{type}}{{else}}text{{/if}}" id="{{id}}"
+           placeholder="{{#if placeholder}}{{placeholder}}{{else}} {{/if}}"
+           name="{{name}}" contenteditable="true" dir="auto" {{#if param}}{{{param}}}{{/if}}/>
+    <div class="input__errorinfo caption__light">label info</div>
+</div>
