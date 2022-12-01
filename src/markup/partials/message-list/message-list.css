@@ -8,6 +8,7 @@
       width: 100%; */
     width: 100%;
     overflow-y: overlay;
+    flex: 1;
 }
 
 .messages-list__container {

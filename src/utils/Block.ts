@@ -151,6 +151,7 @@ export class Block<P extends Record<string, any> = any> {
                 return;
             }
             component.getContent()?.append(...Array.from(stub.childNodes));
+            console.log(component.getContent())
             stub.replaceWith(component.getContent()!);
         });
         return temp.content;

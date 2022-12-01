@@ -12,6 +12,7 @@
 @import url("../markup/partials/usericon/usericon.css");
 @import url("../markup/partials/frames/frame.css");
 @import url("../markup/partials/frames/mainframe.css");
+@import url("../markup/pages/chat.css");
 
 html,
 body {

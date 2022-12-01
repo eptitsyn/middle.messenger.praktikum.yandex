@@ -5,7 +5,21 @@
             {{{search}}}
         </nav>
         <div class="scroll-y">
-
+            <ul class="chat-list">
+                <div class="chat-list-container">
+                    {{#each chats as |chat|}}
+                        <li class="chatelement" data-chat-id="{{id}}">
+                            <div class="chatelement__avatar">
+                                {{{usericon}}}
+                            </div>
+                            <div class="chatelement__info">
+                                <div class="chatelement__info__label">{{name}}</div>
+                                <div class="chatelement__info__lastmsg">{{last_msg}}</div>
+                            </div>
+                        </li>
+                    {{/each}}
+                </div>
+            </ul>
         </div>
     </div>
     <div class="column column__right">
@@ -14,7 +28,17 @@
                 {{{usericon}}}
                 <label class="chat__head__name">John Doe</label>
             </header>
-
+            <div class="messages-list">
+                <div class="messages-list__container">
+                    {{#each messages as |message|}}
+                        <div class="message{{#if own}} own{{/if}}">
+                            <div class="message__bubble">
+                                {{message.text}}
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
             <footer class="chat__composer">
                 <div class="composer">
                     {{messageinput}}
