@@ -1,16 +1,15 @@
-.profile {
-  &__avatar {
+.profile__avatar {
     display: flex;
     flex-direction: row;
     justify-content: left;
     align-items: center;
-
-    &__img {
-
-    }
-
-    &__name {
-      margin: 1rem;
-    }
-  }
 }
+
+.profile__avatar__img {
+
+}
+
+.profile__avatar__name {
+    margin: 1rem;
+}
+

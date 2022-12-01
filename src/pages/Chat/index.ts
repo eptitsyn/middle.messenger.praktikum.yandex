@@ -2,23 +2,23 @@ import { Block } from '../../utils/Block';
 import template from './chat.hbs';
 import { Button, Input } from "../../components";
 
-interface HomePageProps {
+interface ChatPageProps {
     title: string;
 }
 
 export class ChatPage extends Block {
-    constructor(props: HomePageProps) {
+    constructor(props: ChatPageProps) {
         super(props);
     }
 
     init() {
-        this.children.button = new Button({
-            label: 'Click me',
+        this.children.profile = new Button({
+            label: 'Profile',
             events: {
                 click: () => console.log('clicked'),
             }
         });
-        this.children.input = new Input({label: "input label"});
+        this.children.input = new Input({placeholder:"Search"});
     }
 
     render() {

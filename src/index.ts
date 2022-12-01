@@ -1,20 +1,15 @@
-import { HomePage, LoginPage, ErrorPage, RegisterPage } from './pages';
-import { registerComponent } from "./utils/registerComponent";
-import { Button } from "./components";
-
-// registerComponent("Button", Button as any);
+import { HomePage, LoginPage, ErrorPage, RegisterPage, ProfilePage, ChatPage } from './pages';
 
 const root = document.querySelector('#app')!;
 const pages: Record<string, any> = {
     "/": new HomePage({
         title: "Home",
-        links: ["404", "500", "login", "register", "chat", "chatselected", "profile"]
+        links: ["404", "500", "login", "register", "chat", "profile"]
     }),
     "/login": new LoginPage({title: "Login"}),
     "/register": new RegisterPage({title: "Register"}),
-    "/chat": {},
-    "/chatselected": {},
-    "/profile": {},
+    "/chat": new ChatPage({title:"Chat"}),
+    "/profile": new ProfilePage({title:"Profile"}),
     "/404": new ErrorPage({title: "404"}),
     "/500": new ErrorPage({title: "500"}),
 }

@@ -1,20 +1,20 @@
 .message {
-  display: flex;
-  margin: 1rem;
-  margin-bottom: 0.375rem;
+    display: flex;
+    margin: 1rem;
+    margin-bottom: 0.375rem;
 
-  --background-color: var(--color-message);
+    --background-color: var(--color-message);
+}
 
-  &__bubble {
+.message__bubble {
     width: 300px;
     padding: 10px;
     border-radius: 10px;
     background: var(--background-color);
-  }
-
-  &.own {
-    --background-color: var(--color-message-own);
-
-    flex-direction: row-reverse;
-  }
 }
+
+.message.own {
+    --background-color: var(--color-message-own);
+    flex-direction: row-reverse;
+}
+

@@ -2,6 +2,7 @@ import { Block } from '../../utils/Block';
 import template from './login.hbs';
 import { Button, Input } from "../../components";
 import { reloadPage } from '../..';
+import styles from "./login.css";
 
 interface LoginPageProps {
     title: string;
@@ -9,6 +10,7 @@ interface LoginPageProps {
 
 export class LoginPage extends Block {
     constructor(props: LoginPageProps) {
+        console.log("style:",styles)
         super(props);
     }
 

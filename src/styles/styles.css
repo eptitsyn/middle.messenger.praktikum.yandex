@@ -70,15 +70,13 @@ li {
     transform: translateY(-50%);
 }
 
-.caption {
-    &__heavy {
-        font-weight: 600;
-        font-size: 0.9em;
-        line-height: 16px;
-    }
+.caption__heavy {
+    font-weight: 600;
+    font-size: 0.9em;
+    line-height: 16px;
+}
 
-    &__light {
-        font-size: 0.8em;
-        font-weight: 400;
-    }
+.caption__light {
+    font-size: 0.8em;
+    font-weight: 400;
 }
