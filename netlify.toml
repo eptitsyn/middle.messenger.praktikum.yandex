@@ -12,31 +12,6 @@
   NODE_VERSION = "18"
 
 [[redirects]]
-  from = "/404"
-  to = "/"
-  status = 200
-
-[[redirects]]
-  from = "/500"
-  to = "/"
-  status = 200
-
-[[redirects]]
-  from = "/login"
-  to = "/"
-  status = 200
-
-[[redirects]]
-  from = "/register"
-  to = "/"
-  status = 200
-
-[[redirects]]
-  from = "/profile"
-  to = "/"
-  status = 200
-
-[[redirects]]
-  from = "/chat"
+  from = "/*"
   to = "/"
   status = 200
