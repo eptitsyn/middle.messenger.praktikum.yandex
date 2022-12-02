@@ -1,4 +1,4 @@
-import  Block  from '../../utils/Block';
+import Block from '../../utils/Block';
 import template from './profile.hbs';
 import { Button, Input } from "../../components";
 import { reloadPage } from "../../index";
@@ -40,8 +40,18 @@ export class ProfilePage extends Block<ProfilePageProps> {
         this.children.phone = new Input({label: "Phone", name: "phone", type: "tel", pattern: "^\\+?[0-9]{10,15}$"});
         this.children.save = new Button({
             label: "Save", events: {
-                click: () => {
-                    reloadPage("/chat");
+                click: (e) => {
+                    e.preventDefault();
+                    const values = Object
+                        .values(this.children)
+                        .filter(child => child instanceof Input)
+                        .map((child) => {
+                            return {[(child as Input).getName()]: (child as Input).getValue()}
+                        })
+                        .reduce(function (result, current) {
+                            return Object.assign(result, current);
+                        }, {})
+                    console.log(values)
                 }
             }
         });
@@ -52,7 +62,7 @@ export class ProfilePage extends Block<ProfilePageProps> {
                 }
             }
         });
-        this.children.usericon = new Usericon({src:""})
+        this.children.usericon = new Usericon({src: ""})
     }
 
     render() {
