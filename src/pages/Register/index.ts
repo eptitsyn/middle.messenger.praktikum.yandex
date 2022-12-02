@@ -34,9 +34,21 @@ export class RegisterPage extends Block<RegisterPageProps> {
         this.children.repeat = new Input({label: "Repeat password", name: "password_repeat", type: "password"});
         this.children.phone = new Input({label: "Phone", name: "phone", type: "tel", pattern:"^\\+?[0-9]{10,15}$"});
         this.children.register = new Button({
-            label: "Register", events: {
-                click: () => {
-                    reloadPage("/chat");
+            label: "Register",
+            type:"submit",
+            events: {
+                click: (e) => {
+                    e.preventDefault();
+                    const values = Object
+                        .values(this.children)
+                        .filter(child => child instanceof Input)
+                        .map((child) => {
+                            return {[(child as Input).getName()]: (child as Input).getValue()}
+                        })
+                        .reduce(function(result, current) {
+                            return Object.assign(result, current);
+                        }, {})
+                    console.log(values)
                 }
             }
         });

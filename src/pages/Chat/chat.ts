@@ -30,7 +30,7 @@ export class ChatPage extends Block {
         this.children.element1 = new Chatlistelement({name:"John Doe"})
         this.children.element2 = new Chatlistelement({name:"Jane Smith"})
 
-        this.children.messageinput = new Input({placeholder:"message"});
+        this.children.messageinput = new Input({placeholder:"message", name:"message"});
         this.children.sendbutton = new Button({label:"Send"})
 
     }

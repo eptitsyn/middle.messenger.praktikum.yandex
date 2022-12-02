@@ -4,6 +4,7 @@ import { Button, Input } from "../../components";
 
 interface HomePageProps {
     title: string;
+    errorcode: string;
 }
 
 export class ErrorPage extends Block {

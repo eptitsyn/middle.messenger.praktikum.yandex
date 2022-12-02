@@ -1,7 +1,5 @@
-import MainHandlebars from "handlebars";
-// @ts-ignore
-import * as RuntimeHandlebars from "handlebars/dist/handlebars.runtime";
-const Handlebars = Object.assign(MainHandlebars, RuntimeHandlebars);
+import Handlebars from "handlebars";
+
 
 export function registerHelper(){
 

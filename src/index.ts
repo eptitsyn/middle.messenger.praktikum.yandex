@@ -13,8 +13,8 @@ const pages: Record<string, any> = {
     "/register": new RegisterPage({title: "Register"}),
     "/chat": new ChatPage({title:"Chat"}),
     "/profile": new ProfilePage({title:"Profile"}),
-    "/404": new ErrorPage({title: "404"}),
-    "/500": new ErrorPage({title: "500"}),
+    "/404": new ErrorPage({title: "404", errorcode:"404"}),
+    "/500": new ErrorPage({title: "500", errorcode:"500"}),
 }
 export function reloadPage(path:string){
     window.history.pushState("", "", path);
