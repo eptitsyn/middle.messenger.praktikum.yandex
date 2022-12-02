@@ -10,3 +10,33 @@
   command = "npm run build"
 [build.environment]
   NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/404"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/500"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/login"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/register"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/profile"
+  to = "/"
+  status = 200
+
+[[redirects]]
+  from = "/chat"
+  to = "/"
+  status = 200

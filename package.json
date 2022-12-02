@@ -4,7 +4,7 @@
     "description": "Practicum messenger",
     "source": "src/index.html",
     "scripts": {
-        "start": "node app123.js",
+        "start": "node app.js",
         "dev": "parcel src/index.html --port 3000 --no-cache --open",
         "build": "parcel build src/index.html --log-level verbose",
         "test": "echo 'Error: no tests' && exit 1"
