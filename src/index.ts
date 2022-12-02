@@ -1,4 +1,7 @@
-import { HomePage, LoginPage, ErrorPage, RegisterPage, ProfilePage, ChatPage } from './pages';
+import { ChatPage, ErrorPage, HomePage, LoginPage, ProfilePage, RegisterPage } from './pages';
+import {registerHelper} from "./utils/helper";
+
+registerHelper();
 
 const root = document.querySelector('#app')!;
 const pages: Record<string, any> = {
@@ -13,13 +16,9 @@ const pages: Record<string, any> = {
     "/404": new ErrorPage({title: "404"}),
     "/500": new ErrorPage({title: "500"}),
 }
-
-
 export function reloadPage(path:string){
-    console.log(path);
     window.history.pushState("", "", path);
     let page = pages[path];
-    console.log(page);
     root.innerHTML = "";
     root.replaceWith(page.getContent()!);
     page.dispatchComponentDidMount();

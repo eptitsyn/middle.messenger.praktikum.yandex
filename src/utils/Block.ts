@@ -2,7 +2,7 @@ import { EventBus } from "./EventBus";
 import { nanoid } from 'nanoid';
 
 // Нельзя создавать экземпляр данного класса
-export class Block<P extends Record<string, any> = any> {
+class Block<P extends Record<string, any> = any> {
     static EVENTS = {
         INIT: "init",
         FLOW_CDM: "flow:component-did-mount",
@@ -21,7 +21,7 @@ export class Block<P extends Record<string, any> = any> {
      * @param propsWithChildren
      * @param {string} tagName
      */
-    constructor(propsWithChildren: P, tagName = "div") {
+  constructor(propsWithChildren: P, tagName: string = "div") {
         const eventBus = new EventBus();
 
         const {props, children} = this._getChildrenAndProps(propsWithChildren);
@@ -133,6 +133,7 @@ export class Block<P extends Record<string, any> = any> {
     }
 
     protected compile(template: (context: any) => string, context: any) {
+        // debugger;
         const contextAndStubs = {...context};
 
         Object.entries(this.children).forEach(([name, component]) => {
@@ -151,7 +152,7 @@ export class Block<P extends Record<string, any> = any> {
                 return;
             }
             component.getContent()?.append(...Array.from(stub.childNodes));
-            console.log(component.getContent())
+            // console.log(component.getContent())
             stub.replaceWith(component.getContent()!);
         });
         return temp.content;
@@ -203,3 +204,5 @@ export class Block<P extends Record<string, any> = any> {
         this.getContent()!.style.display = "none";
     }
 }
+
+export default Block;

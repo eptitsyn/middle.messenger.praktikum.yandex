@@ -1,4 +1,4 @@
-import { Block } from '../../utils/Block';
+import  Block  from '../../utils/Block';
 import template from './register.hbs';
 import { Button, Input } from "../../components";
 import { reloadPage } from "../../index";
@@ -7,7 +7,7 @@ interface RegisterPageProps {
     title: string;
 }
 
-export class RegisterPage extends Block {
+export class RegisterPage extends Block<RegisterPageProps> {
     constructor(props: RegisterPageProps) {
         super(props);
     }

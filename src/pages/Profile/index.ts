@@ -1,4 +1,4 @@
-import { Block } from '../../utils/Block';
+import  Block  from '../../utils/Block';
 import template from './profile.hbs';
 import { Button, Input } from "../../components";
 import { reloadPage } from "../../index";
@@ -8,7 +8,7 @@ interface ProfilePageProps {
     title: string;
 }
 
-export class ProfilePage extends Block {
+export class ProfilePage extends Block<ProfilePageProps> {
     constructor(props: ProfilePageProps) {
         super(props);
     }
