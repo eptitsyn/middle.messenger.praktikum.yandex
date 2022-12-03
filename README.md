@@ -9,9 +9,9 @@ Run `npm start` to run express server
 
 ## Посмотреть
 
-[На Netlify](https://sprint-1--eptitsyn-ya-praktikum-js.netlify.app/)
+[На Netlify](https://sprint-2--eptitsyn-ya-praktikum-js.netlify.app/)
 
 ## Макет
 
-Макет приложения 
+Макет приложения
 [Проект на Figma](https://www.figma.com/file/NNJuLK7MfGXY4XBj5CrS3z/yandex.praktikum.middle.messenger)

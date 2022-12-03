@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "target": "es2016",
+        "module": "commonjs",
+        "declaration": false,
+        "sourceMap": true,
+        "outDir": "dist",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "skipLibCheck": true,
+        "lib": [
+            "ESNext",
+            "DOM",
+        ],
+    }
+}
+
+
+// Lection config
+// {
+//     "compilerOptions": {
+//     "outDir": "dist",
+//     "target": "es2016",
+//     "declaration": false,
+//     "module": "commonjs",
+//     "strictNullChecks": true,
+//     "sourceMap": true,
+//     "noImplicitAny": true,
+//     "noUnusedLocals": true,
+//     "noUnusedParameters": true,
+//    }
+// }
+

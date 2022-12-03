@@ -1,10 +1,18 @@
 {
-    "files.autoSave": "afterDelay",
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
     "typescript.tsserver.experimental.enableProjectDiagnostics": true,
     "js/ts.implicitProjectConfig.strictFunctionTypes": true,
     "cSpell.words": [
         "anikin",
-        "sarif"
-    ]
+        "codepaths",
+        "sarif",
+        "stylelint",
+        "tsbuildinfo"
+    ],
+    "eslint.alwaysShowStatus": true,
+    "eslint.lintTask.enable": true,
+    "editor.formatOnType": true,
+    "cSpell.enableFiletypes": [
+        "postcss"
+    ],
+    "cSpell.language": "en,ru,ru-RU,en-US,en-GB,lorem"
 }

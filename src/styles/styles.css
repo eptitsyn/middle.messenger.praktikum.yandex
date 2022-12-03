@@ -1,24 +1,25 @@
-@import "./_variables.css";
-@import "normalize.css";
+@import url("./_variables.css");
+@import url("normalize.css");
 
 /* Partials */
-@import "../markup/partials/button/button.css";
-@import "../markup/partials/message-list/message-list.css";
-@import "../markup/partials/message/message.css";
-@import "../markup/partials/composer/composer.css";
-@import "../markup/partials/input/input.css";
-@import "../markup/partials/chatlist/chatlist.css";
-@import "../markup/partials/chatlist/chatlistelement.css";
-@import "../markup/partials/usericon/usericon.css";
-@import "../markup/partials/frames/frame.css";
-@import "../markup/partials/frames/mainframe.css";
+@import url("../markup/partials/button/button.css");
+@import url("../markup/partials/message-list/message-list.css");
+@import url("../markup/partials/message/message.css");
+@import url("../markup/partials/composer/composer.css");
+@import url("../markup/partials/input/input.css");
+@import url("../markup/partials/chatlist/chatlist.css");
+@import url("../markup/partials/chatlist/chatlistelement.css");
+@import url("../markup/partials/usericon/usericon.css");
+@import url("../markup/partials/frames/frame.css");
+@import url("../markup/partials/frames/mainframe.css");
+@import url("../markup/pages/chat.css");
 
 html,
-body {
+body,
+#app {
     height: 100%;
     min-height: 90vh;
-    font: "Open Sans", sans-serif;
-    font-family: sans-serif;
+    font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -50,9 +51,6 @@ li {
 [contenteditable="true"] {
     cursor: text;
     outline: none;
-    -webkit-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
     user-select: text;
     white-space: pre-wrap;
     background-color: transparent;
@@ -71,19 +69,16 @@ li {
     margin: 0 auto;
     position: absolute;
     top: 50%;
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
-.caption {
-    &__heavy {
-        font-weight: 600;
-        font-size: 0.9em;
-        line-height: 16px;
-    }
+.caption__heavy {
+    font-weight: 600;
+    font-size: 0.9em;
+    line-height: 16px;
+}
 
-    &__light {
-        font-size: 0.8em;
-        font-weight: 400;
-    }
+.caption__light {
+    font-size: 0.8em;
+    font-weight: 400;
 }
