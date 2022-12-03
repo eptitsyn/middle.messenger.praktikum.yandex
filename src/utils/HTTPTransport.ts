@@ -1,15 +1,18 @@
-export enum Method {
-    Get = 'Get',
-    Post = 'Post',
-    Put = 'Put',
-    Patch = 'Patch',
-    Delete = 'Delete'
+export enum METHODS {
+    GET,
+    POST ,
+    PUT ,
+    PATCH ,
+    DELETE
 }
 
 type Options = {
     method: Method;
     data?: any;
 };
+
+// создаем тип метода
+type HTTPMethod = (url: string, options?: Options) => Promise<unknown>
 
 export default class HTTPTransport {
     static API_URL = 'https://ya-praktikum.tech/api/v2';
@@ -19,36 +22,21 @@ export default class HTTPTransport {
         this.endpoint = `${HTTPTransport.API_URL}${endpoint}`;
     }
 
-    public get<Response>(path = '/'): Promise<Response> {
-        return this.request<Response>(this.endpoint + path);
-    }
-
-    public post<Response = void>(path: string, data?: unknown): Promise<Response> {
-        return this.request<Response>(this.endpoint + path, {
-            method: Method.Post,
-            data,
-        });
-    }
-
-    public put<Response = void>(path: string, data: unknown): Promise<Response> {
-        return this.request<Response>(this.endpoint + path, {
-            method: Method.Put,
-            data,
-        });
-    }
-
-    public patch<Response = void>(path: string, data: unknown): Promise<Response> {
-        return this.request<Response>(this.endpoint + path, {
-            method: Method.Patch,
-            data,
-        });
-    }
-
-    public delete<Response>(path: string): Promise<Response> {
-        return this.request<Response>(this.endpoint + path, {
-            method: Method.Delete,
-        });
-    }
+    get: HTTPMethod = (url, options = {}) => (
+        this.request(url, {...options, method: METHODS.GET}, options.timeout)
+    )
+    // используем тип и удаляем дублирование в аргументах
+    put: HTTPMethod = (url, options = {}) => (
+        this.request(url, {...options, method: METHODS.PUT}, options.timeout)
+    )
+    // используем тип и удаляем дублирование в аргументах
+    post: HTTPMethod = (url, options = {}) => (
+        this.request(url, {...options, method: METHODS.POST}, options.timeout)
+    )
+    // используем тип и удаляем дублирование в аргументах
+    delete: HTTPMethod = (url, options = {}) => (
+        this.request(url, {...options, method: METHODS.DELETE}, options.timeout)
+    )
 
     private request<Response>(url: string, options: Options = {method: Method.Get}): Promise<Response> {
         const {method, data} = options;
