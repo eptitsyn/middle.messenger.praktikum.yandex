@@ -1,3 +1,6 @@
-export function validate(name:string, value:string){
 
+
+export function validate(element:HTMLElement):string{
+    element.mesvalid = false;
+    return "asd";
 }

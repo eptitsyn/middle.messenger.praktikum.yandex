@@ -36,7 +36,7 @@
 
 .input__errorinfo {
     display: none;
-    color: var(--color-secondary-label);
+    color: var(--color-error);
     height: 16px;
 
     /* Inside auto layout */

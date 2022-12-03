@@ -4,6 +4,8 @@
     {{/if}}
     <input class="input__input" type="{{#if type}}{{type}}{{else}}text{{/if}}" {{#if if}}id="{{id}}{{/if}}"
            placeholder="{{#if placeholder}}{{placeholder}}{{else}} {{/if}}"
-           name="{{name}}" contenteditable="true" dir="auto"{{#if pattern}} pattern="{{{pattern}}}"{{/if}} {{#if param}}{{{param}}}{{/if}} />
-    <div class="input__errorinfo caption__light">label info</div>
+           name="{{name}}" contenteditable="true" dir="auto"{{#if pattern}} pattern="{{{pattern}}}"{{/if}}
+            {{#if required}}required{{/if}}
+            {{#if param}}{{{param}}}{{/if}} />
+    <div class="input__errorinfo caption__light">{{message}}</div>
 </div>

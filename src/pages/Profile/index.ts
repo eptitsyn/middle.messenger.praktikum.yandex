@@ -10,7 +10,23 @@ interface ProfilePageProps {
 
 export class ProfilePage extends Block<ProfilePageProps> {
     constructor(props: ProfilePageProps) {
-        super(props);
+        super({...props,
+            events: {
+                click: (e) => {
+                    e.preventDefault();
+                    const values = Object
+                        .values(this.children)
+                        .filter(child => child instanceof Input)
+                        .map((child) => {
+                            return {[(child as Input).getName()]: (child as Input).getValue()}
+                        })
+                        .reduce(function (result, current) {
+                            return Object.assign(result, current);
+                        }, {})
+                    console.log(values)
+                }
+            }
+        });
     }
 
     init() {
@@ -39,21 +55,7 @@ export class ProfilePage extends Block<ProfilePageProps> {
         this.children.repeat = new Input({label: "Repeat password", name: "password_repeat", type: "password"});
         this.children.phone = new Input({label: "Phone", name: "phone", type: "tel", pattern: "^\\+?[0-9]{10,15}$"});
         this.children.save = new Button({
-            label: "Save", events: {
-                click: (e) => {
-                    e.preventDefault();
-                    const values = Object
-                        .values(this.children)
-                        .filter(child => child instanceof Input)
-                        .map((child) => {
-                            return {[(child as Input).getName()]: (child as Input).getValue()}
-                        })
-                        .reduce(function (result, current) {
-                            return Object.assign(result, current);
-                        }, {})
-                    console.log(values)
-                }
-            }
+            label: "Save"
         });
         this.children.logout = new Button({
             label: "Logout", events: {
