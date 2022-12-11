@@ -3,4 +3,4 @@ export * from "./Error/error";
 export * from "./Home";
 export * from "./Login/login";
 export * from "./Profile";
-export * from "./Register";
+export * from "./Register/register";

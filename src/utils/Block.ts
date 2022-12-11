@@ -10,76 +10,123 @@ class Block<P extends Record<string, any> = any> {
         FLOW_RENDER: "flow:render"
     } as const;
 
+  // Unique identifier for the block
     public id = nanoid(8);
+
+  // Properties passed to the block
     protected props: P;
+
+  // Child blocks
     public children: Record<string, Block>;
+
+  // Event bus to manage events
     private eventBus: () => EventBus;
+
+  // The DOM element associated with the block
     private _element: HTMLElement | null = null;
+
+  // Meta data about the block
     private _meta: { tagName: string; props: P; };
 
-    /** JSDoc
-     * @param propsWithChildren
-     * @param {string} tagName
+  /**
+   * Constructor for the Block class
+   *
+   * @param propsWithChildren - The properties and children for the block
+   * @param tagName - The HTML tag name for the block
      */
   constructor(propsWithChildren: P, tagName: string = "div") {
+    // Create a new event bus
         const eventBus = new EventBus();
 
+    // Get the properties and children from the props
         const {props, children} = this._getChildrenAndProps(propsWithChildren);
 
+    // Store the meta data for the block
         this._meta = {
             tagName,
             props: props as P
         };
 
+    // Set the children and props for the block
         this.children = children;
         this.props = this._makePropsProxy(props);
 
+    // Store a reference to the event bus
         this.eventBus = () => eventBus;
 
+    // Register the block's event handlers
         this._registerEvents(eventBus);
 
+    // Emit the INIT event to initialize the block
         eventBus.emit(Block.EVENTS.INIT);
     }
 
+  // Helper method to get the properties and children from the props object
     _getChildrenAndProps(childrenAndProps: P): { props: P, children: Record<string, Block> } {
+    // Object to hold the properties and children
         const props: Record<string, unknown> = {};
         const children: Record<string, Block> = {};
 
+    // Iterate over the keys and values in the props object
         Object.entries(childrenAndProps).forEach(([key, value]) => {
+      // Check if the value is a Block instance
             if (value instanceof Block) {
+        // If it is, add it to the children object
                 children[key as string] = value;
             } else {
+        // Otherwise, add it to the props object
                 props[key] = value;
             }
         });
 
+    // Return the props and children objects
         return {props: props as P, children};
     }
 
+    // Helper method to add event
     _addEvents() {
+  // Get the "events" property from the props
         const {events = {}} = this.props as P & { events: Record<string, () => void> };
 
+  // Iterate over the keys in the events object
         Object.keys(events).forEach(eventName => {
+    // Add an event listener for each event
             this._element?.addEventListener(eventName, events[eventName])
         });
     }
 
+// Helper method to remove event listeners from the block's element
     _removeEvents(){
+  // Get the "events" property from the props
         const {events = {}} = this.props as P & { events: Record<string, () => void> };
+
+  // Iterate over the keys in the events object
         Object.keys(events).forEach(eventName => {
+    // Remove the event listener for each event
             this._element?.removeEventListener(eventName, events[eventName])
         });
     }
 
+// Helper method to register the block's event handlers
     _registerEvents(eventBus: EventBus) {
+  // Register the INIT event handler
         eventBus.on(Block.EVENTS.INIT, this._init.bind(this));
+
+  // Register the FLOW_CDM event handler
         eventBus.on(Block.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
+
+  // Register the FLOW_CDU event handler
         eventBus.on(Block.EVENTS.FLOW_CDU, this._componentDidUpdate.bind(this));
+
+  // Register the FLOW_RENDER event handler
         eventBus.on(Block.EVENTS.FLOW_RENDER, this._render.bind(this));
     }
 
     _createResources() {
+  // Get the tag name from the block's meta data
         const {tagName} = this._meta;
+
+  // Create the DOM element using the tag name
         this._element = this._createDocumentElement(tagName);
     }
 
@@ -89,19 +136,26 @@ class Block<P extends Record<string, any> = any> {
         this.eventBus().emit(Block.EVENTS.FLOW_RENDER);
     }
 
+// Method to initialize the block
     protected init() {
     }
 
+// Event handler for the FLOW_CDM event
     _componentDidMount() {
+  // Call the componentDidMount() method
         this.componentDidMount();
     }
 
+// Method to be called when the block is mounted to the DOM
     componentDidMount() {
     }
 
+// Method to dispatch the FLOW_CDM event to the block and its children
     public dispatchComponentDidMount() {
+  // Emit the FLOW_CDM event
         this.eventBus().emit(Block.EVENTS.FLOW_CDM);
 
+  // Dispatch the event to the block's children
         Object.values(this.children).forEach(child => child.dispatchComponentDidMount());
     }
 
