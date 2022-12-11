@@ -19,19 +19,20 @@ Run `npm start` to run express server
 ## Directory structure
 
 ```text
-.
-|-- src
-|   |-- assets
-|   |-- components
-|   |-- context
-|   |-- data            // Data files
-|   |-- features        // Feature files
-|   |-- hooks
-|   |-- layouts         // Layouts
-|   |-- lib
-|   |-- pages           // Pages
-|   |-- services        // API
-|   `-- utils
-`-- static
-
+..
+├── src
+│   ├── assets
+│   ├── components
+│   ├── context
+│   ├── data
+│   ├── features
+│   ├── hooks
+│   ├── layouts
+│   ├── lib
+│   ├── pages
+│   ├── services
+│   ├── styles
+│   └── utils
+└── static
+    └── images
 ```
