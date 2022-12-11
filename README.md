@@ -15,3 +15,23 @@ Run `npm start` to run express server
 
 Макет приложения
 [Проект на Figma](https://www.figma.com/file/NNJuLK7MfGXY4XBj5CrS3z/yandex.praktikum.middle.messenger)
+
+## Directory structure
+
+```text
+.
+|-- src
+|   |-- assets
+|   |-- components
+|   |-- context
+|   |-- data            // Data files
+|   |-- features        // Feature files
+|   |-- hooks
+|   |-- layouts         // Layouts
+|   |-- lib
+|   |-- pages           // Pages
+|   |-- services        // API
+|   `-- utils
+`-- static
+
+```
